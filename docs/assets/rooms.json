@@ -1,5 +1,5 @@
 {
-  "revision": "v2",
+  "revision": "corner-bath-20260912",
   "rooms": [
     {
       "id": "living",
@@ -275,14 +275,14 @@
         35.5
       ],
       "camera": [
-        43.5,
-        24.7,
-        5.3
+        44.6,
+        31.85,
+        5.65
       ],
       "target": [
-        47.4,
-        32.1,
-        3.6
+        49.55,
+        27.7,
+        2.25
       ],
       "labels": {
         "en": "Primary bathroom",

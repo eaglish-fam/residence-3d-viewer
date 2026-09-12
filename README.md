@@ -33,3 +33,7 @@ All required Three.js modules are included locally. No external CDN, analytics o
 ## Validation
 
 Checked all 18 room presets in both languages, language persistence, camera preservation, translated floor-plan labels and load failures, desktop layout, and 390 px / 320 px mobile layouts. Full-height and cutaway wall meshes were checked for open and non-manifold edges; both counts are zero.
+
+## Model refinement
+
+The primary bathroom includes a diagonal built-in bathtub on a shaped corner deck and a shower following the shared angled partition, with a rear bench and west-side entry. The Bedroom 3 desk faces the interior; the chair and desk assembly were checked against the wall geometry and nearby bed.

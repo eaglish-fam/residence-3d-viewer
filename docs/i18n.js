@@ -1,4 +1,4 @@
-import {strings} from './strings.js';
+import {strings} from './strings.js?v=corner-bath-20260912';
 const storageKey='residence-viewer-language';
 let language='en',progressKey='initialProgress',progressVars={};
 const listeners=new Set();

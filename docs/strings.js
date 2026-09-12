@@ -175,7 +175,7 @@ export const strings = {
       },
       "masterbath": {
         "title": "Primary bathroom",
-        "desc": "Two vanity areas, angled bathtub, separate shower and toilet room"
+        "desc": "Angled built-in bathtub, wraparound shower, two vanity areas and a toilet room"
       },
       "closet": {
         "title": "Walk-in closet",
@@ -277,7 +277,7 @@ export const strings = {
       },
       "masterbath": {
         "title": "主臥衛浴",
-        "desc": "雙洗手區、斜置浴缸、獨立淋浴與廁間"
+        "desc": "斜角嵌入式浴缸、沿斜邊配置的淋浴區、雙洗手區與廁間"
       },
       "closet": {
         "title": "主更衣室",

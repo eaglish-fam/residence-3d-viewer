@@ -1,4 +1,4 @@
-import {getLanguage, t, viewText, onLanguageChange, setProgress} from './i18n.js';
+import {getLanguage, t, viewText, onLanguageChange, setProgress} from './i18n.js?v=corner-bath-20260912';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
@@ -128,10 +128,10 @@ function updateViewCopy(){
 }
 onLanguageChange(updateViewCopy);updateViewCopy();
 let roomData;
-try{const response=await fetch('./assets/rooms.json');if(!response.ok)throw new Error('Room metadata failed');roomData=await response.json();}
+try{const response=await fetch('./assets/rooms.json?v=corner-bath-20260912');if(!response.ok)throw new Error('Room metadata failed');roomData=await response.json();}
 catch(error){error.userMessage='loadError';throw error;}
 for(const room of roomData.rooms){presets[room.id]={p:room.camera,t:room.target,inside:true};const opt=document.createElement('option');opt.value=room.id;opt.textContent=viewText(room.id).title;$('#room-select').append(opt);}
-const loader=new GLTFLoader();loader.load('./assets/house.glb',gltf=>{
+const loader=new GLTFLoader();loader.load('./assets/house.glb?v=corner-bath-20260912',gltf=>{
  try{setProgress('preparing');house=optimize(gltf.scene);scene.add(house);loaded=true;go('overview',true);$('#loading').style.opacity='0';setTimeout(()=>$('#loading').remove(),350);window.__viewer={get state(){return{loaded,current,inside,meshes:house.children.length,roofsVisible:layers.roof.filter(x=>x.visible).length,roofMeshes:layers.roof.length,wallFullVisible:layers.wall.filter(x=>x.visible).length,wallCutVisible:layers.wall_cut.filter(x=>x.visible).length,revision:roomData.revision,language:getLanguage(),rooms:roomData.rooms.length,clipped:$('#cutaway').checked,position:camera.position.toArray()};},go};}
  catch(e){setProgress('renderError');console.error(e);}
 },xhr=>{if(xhr.total)setProgress('progress',{percent:Math.min(100,Math.round(xhr.loaded/xhr.total*100))});},err=>{setProgress('loadError');console.error(err);});
