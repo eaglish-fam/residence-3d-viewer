@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title data-i18n="pageTitle">Residence | Interactive 3D Model</title><meta name="theme-color" content="#eeede7"><meta name="robots" content="noindex, nofollow"><link rel="icon" href="data:,"><link rel="stylesheet" href="./style.css"><script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script></head>
+<body>
+<main id="stage" aria-label="Interactive 3D house model" data-i18n-aria="stage"></main>
+<header><div class="mark" aria-hidden="true">⌂</div><div class="brand"><p class="eyebrow" data-i18n="eyebrow">RESIDENCE / MODEL STUDY</p><h1 data-i18n="heading">Residence in 3D</h1></div><label class="language-control"><span data-i18n="language">Language</span><select id="language-select" aria-label="Language" data-i18n-aria="language"><option value="en" lang="en">English</option><option value="zh-Hant" lang="zh-Hant">繁體中文</option></select></label></header>
+<aside class="panel" aria-label="Model controls" data-i18n-aria="controls">
+ <div class="panel-head"><span data-i18n="explore">Explore the house</span><span class="small" data-i18n="spaces">18 spaces</span></div>
+ <div class="tabs" role="tablist" aria-label="Model controls" data-i18n-aria="controls" id="mode-tabs"><button id="tab-exterior" class="active" role="tab" aria-selected="true" aria-controls="exterior-controls" data-i18n="exterior">Exterior</button><button id="tab-interior" role="tab" aria-selected="false" aria-controls="interior-controls" data-i18n="interior">Walk inside</button></div>
+ <div id="exterior-controls" role="tabpanel" aria-labelledby="tab-exterior">
+  <div class="views"><button data-view="overview" class="view active wide" data-i18n="overviewButton">↗  Whole house</button><button data-view="plan" class="view wide" data-i18n="planButton">⊞  Floor plan</button><button data-view="front" class="view" data-i18n="frontButton">01  Front</button><button data-view="rear" class="view" data-i18n="rearButton">02  Rear</button><button data-view="left" class="view" data-i18n="leftButton">03  Left</button><button data-view="right" class="view" data-i18n="rightButton">04  Right</button></div>
+  <div class="divider"></div>
+  <label class="switch-row"><span data-i18n="roof">Show roof</span><input id="roof" type="checkbox" checked><span class="switch"></span></label>
+  <label class="switch-row"><span data-i18n="cutaway">Cutaway view</span><input id="cutaway" type="checkbox"><span class="switch"></span></label>
+  <label class="switch-row"><span data-i18n="rotate">Auto-rotate</span><input id="rotate" type="checkbox"><span class="switch"></span></label>
+ </div>
+ <div id="interior-controls" role="tabpanel" aria-labelledby="tab-interior" hidden>
+  <label class="room-label" for="room-select" data-i18n="roomLabel">Choose a room</label>
+  <select id="room-select" aria-label="Choose a room" data-i18n-aria="roomLabel"></select>
+  <div class="views"><button data-view="living" class="view">Family room</button><button data-view="kitchen" class="view">Kitchen</button><button data-view="master" class="view">Primary bedroom</button><button data-view="entry" class="view">Entry &amp; foyer</button></div>
+  <div class="move-row"><button id="backward" title="Move backward" data-i18n="backward" data-i18n-title="backTitle">↓ Back</button><button id="forward" title="Move forward" data-i18n="forward" data-i18n-title="forwardTitle">↑ Forward</button></div>
+  <p class="interior-hint" data-i18n="interiorHint">Drag to look · Use the buttons to move<br>On a computer, walk with W A S D</p>
+ </div>
+ <div class="panel-footer"><button id="reference"><span data-i18n="reference">Compare floor plans</span><span aria-hidden="true">↗</span></button><a href="./assets/house.glb" download><span data-i18n="downloadModel">Download 3D model</span><span aria-hidden="true">↙</span></a><a href="./assets/house.blend" download><span data-i18n="downloadBlend">Download Blender file</span><span aria-hidden="true">↙</span></a></div>
+</aside>
+<div class="scene-label"><p class="eyebrow" id="view-type">EXTERIOR / 3D</p><h2 id="view-title">Whole house</h2><p id="view-desc">Multiple gables, a projecting entry and a rear porch</p></div>
+<footer><span id="hint">Drag to orbit · Scroll or pinch to zoom</span><span class="note" data-i18n="note">Rebuilt from the drawings; furnishings and finishes are illustrative.</span><button id="reset" title="Reset this view" aria-label="Reset this view" data-i18n-title="reset" data-i18n-aria="reset">↺</button></footer>
+<div id="loading" role="status" aria-live="polite"><div class="loader"></div><b data-i18n="loading">Preparing your house model</b><span id="progress">Loading geometry and materials…</span></div>
+<dialog id="plan-dialog" aria-labelledby="plan-dialog-title"><div class="dialog-head"><strong id="plan-dialog-title" data-i18n="planDialog">Floor plan comparison</strong><button id="close-plan" aria-label="Close floor plan" data-i18n-aria="closePlan">×</button></div><div class="plan-tabs"><button data-plan="original" class="active" aria-pressed="true" data-i18n="original">Original drawing</button><button data-plan="traced" aria-pressed="false" data-i18n="traced">Rebuilt wall layout</button></div><div class="plan-body"><img id="plan-image" src="./assets/floor-plan.jpg" alt="Original floor plan supplied for the house reconstruction"></div></dialog>
+<noscript><p class="noscript">Please enable JavaScript to explore the 3D model.<br>請啟用 JavaScript 以探索 3D 模型。</p></noscript>
+<script type="module" src="./i18n.js"></script><script type="module">import('./viewer.js').catch(async error=>{console.error(error);const {setProgress}=await import('./i18n.js');setProgress(error.userMessage||'renderError');});</script>
+</body></html>
