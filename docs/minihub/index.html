@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小倉・幫 MINIHUB｜桃園平鎮電商代出貨，每單 30 元起</title>
+<meta name="description" content="自己出貨的電商老闆，把包貨交給我們。每單 30 元起，不含運費。桃園平鎮常溫倉，先試 100 單不用簽約。">
+<meta name="theme-color" content="#0E2457">
+<meta name="color-scheme" content="light">
+<!-- 搬到 minihub.com.tw 之前不讓搜尋引擎收錄，避免和正式網址重複 -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<style>
+/* 手機優先。顏色取自 MINIHUB 標誌：深藍、天藍、綠。圖片都可以缺，缺的時候版面自己收起來。 */
+:root{
+  --navy:#0E2457;--blue:#0A8FDE;--link:#0868B0;--green:#12A44A;--go:#0B8A3D;--go-hover:#087532;
+  --bg:#F4F7FB;--panel:#FFFFFF;--ink:#0E2457;--text:#22324D;--muted:#5A6A82;--line:#DCE3EC;--soft:#EAF4FC;--save:#E8F6EE;
+  --r:16px;--shadow:0 1px 2px rgba(14,36,87,.06),0 10px 28px rgba(14,36,87,.08);
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --num:"Inter","Noto Sans TC",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--panel);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--link)}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{color:var(--ink);line-height:1.3;margin:0;text-wrap:balance}
+h1{font-size:clamp(32px,8.4vw,54px);font-weight:900;letter-spacing:-.01em}
+h2{font-size:clamp(25px,5.6vw,36px);font-weight:900}
+h3{font-size:18px;font-weight:700}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+.ic{width:20px;height:20px;flex:none}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:14px;font-weight:700;color:var(--link);margin-bottom:12px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+
+/* 頁首 */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.mark{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink)}
+.mark b{font-size:19px;font-weight:900}
+.mark span{font-family:var(--num);font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--muted)}
+.tel{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:var(--ink);text-decoration:none;padding:7px 14px;border:1.5px solid var(--line);border-radius:999px;white-space:nowrap}
+.tel .ic{width:16px;height:16px;color:var(--go)}
+
+/* 按鈕 */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:0 22px;border-radius:12px;font:inherit;font-weight:700;font-size:17px;line-height:1.3;text-align:center;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .15s,transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn-go{background:var(--go);color:#fff;box-shadow:0 6px 18px rgba(11,138,61,.28)}
+.btn-go:hover{background:var(--go-hover)}
+.btn-ghost{background:var(--panel);color:var(--ink);border-color:var(--line)}
+.btn .ic{width:18px;height:18px}
+a:focus-visible,.btn:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+/* 第一屏 */
+.hero{background:linear-gradient(180deg,var(--soft) 0%,var(--panel) 88%);padding:28px 0 12px}
+.hero .wrap{display:grid;gap:28px}
+.hero .lead{font-size:18px;margin-top:16px;max-width:30em}
+.hero .lead strong{color:var(--ink)}
+.ctas{display:grid;gap:10px;margin-top:24px}
+.proof{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px}
+.proof li{display:flex;gap:10px;align-items:flex-start;font-size:15px;font-weight:500;color:var(--ink)}
+.proof .ic{color:var(--green);margin-top:3px}
+.hero-art{margin:0;border-radius:20px;overflow:hidden;background:#E6F2FC;aspect-ratio:16/10;box-shadow:var(--shadow)}
+/* 插圖四周留白多，裁掉上下、放大一點，主體才不會太小 */
+.hero-art img{width:100%;height:100%;object-fit:cover;transform:scale(1.25)}
+@media (min-width:900px){
+  .hero{padding:64px 0 32px}
+  .hero .wrap{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:56px}
+  .hero .wrap:not(:has(.hero-art)){grid-template-columns:minmax(0,760px)}
+  .ctas{display:flex;flex-wrap:wrap}
+}
+
+/* 區塊 */
+section{padding:56px 0}
+@media (min-width:900px){section{padding:88px 0}}
+.alt{background:var(--bg)}
+.sec-head{max-width:40em;margin-bottom:28px}
+.sec-head p{color:var(--muted);margin-top:12px;font-size:17px}
+.dark{background:var(--navy);color:#DDE6F3}
+.dark h2,.dark h3{color:#fff}
+.dark .sec-head p{color:#B9C7DD}
+.dark .eyebrow{color:#7CC8F5}
+
+/* 試算器 */
+.calc{display:grid;gap:16px}
+@media (min-width:900px){.calc{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:start}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);min-width:0}
+.field{margin-bottom:24px}
+.field>label,.field>.lab{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:700;font-size:15px;color:var(--ink);margin-bottom:8px}
+.field output{font-family:var(--num);font-size:22px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--go);height:32px;margin:0}
+.ticks{display:flex;justify-content:space-between;font-family:var(--num);font-size:12px;color:var(--muted)}
+.seg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media (min-width:480px){.seg{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.seg label{position:relative;display:flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid var(--line);border-radius:10px;font-size:15px;cursor:pointer;background:var(--panel)}
+.seg input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.seg label:has(input:checked){border-color:var(--go);background:var(--save);color:var(--go);font-weight:700}
+.seg label:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:2px}
+.fine{font-size:13px;color:var(--muted)}
+.cat-note{margin-top:10px}
+.assume{border-top:1px dashed var(--line);padding-top:16px}
+.assume summary{cursor:pointer;font-weight:700;color:var(--link);font-size:15px;list-style:none}
+.assume summary::-webkit-details-marker{display:none}
+.assume summary::after{content:" ＋"}
+.assume[open] summary::after{content:" －"}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.agrid label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.agrid input{font:inherit;font-family:var(--num);min-height:44px;padding:0 10px;border:1.5px solid var(--line);border-radius:8px;width:100%;color:var(--ink);background:var(--panel)}
+.result{background:var(--navy);color:#fff;border-radius:var(--r);padding:24px;box-shadow:var(--shadow);min-width:0}
+@media (min-width:900px){.result{position:sticky;top:80px;padding:30px}}
+.r-tag{font-size:13px;font-weight:700;color:#7CC8F5;margin-bottom:6px}
+.r-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.r-row span{font-size:15px;color:#C9D5E8}
+.r-row b{font-family:var(--num);font-size:24px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.r-row.self b{font-size:20px;font-weight:600;color:#C9D5E8}
+.r-save{margin-top:18px;padding:18px;border-radius:12px;background:rgba(18,164,74,.18)}
+.r-save .lab{font-size:15px;font-weight:700;color:#BFF0D0}
+.r-save .big{display:block;font-family:var(--num);font-size:clamp(36px,10vw,50px);font-weight:800;line-height:1.1;color:#62E394;margin-top:4px;font-variant-numeric:tabular-nums}
+.r-save .sub{font-size:14px;color:#DDE6F3;margin-top:8px}
+.r-save.neutral{background:rgba(255,255,255,.08)}
+.r-save.neutral .lab{color:#C9D5E8}
+.r-save.neutral .big{color:#fff}
+.r-note{font-size:13px;color:#B9C7DD;margin-top:14px}
+.r-lines{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:4px;font-size:14px;color:#DDE6F3}
+.r-lines li{display:flex;justify-content:space-between;gap:12px}
+.r-lines li span:last-child{font-family:var(--num);font-variant-numeric:tabular-nums;white-space:nowrap}
+.result .ctas{margin-top:22px}
+.result .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+
+/* 試單 */
+.offer{display:grid;gap:28px}
+@media (min-width:900px){.offer{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.checks li{display:flex;gap:12px;font-size:17px;color:var(--ink)}
+.checks .ic{width:24px;height:24px;color:var(--green);margin-top:2px}
+.call{margin-top:28px;display:grid;gap:6px}
+.call a{display:inline-flex;align-items:center;gap:10px;font-family:var(--num);font-weight:800;font-size:24px;color:var(--ink);text-decoration:none;width:fit-content}
+.call a .ic{color:var(--go)}
+.form{display:grid;gap:16px}
+.form h3{font-size:20px}
+.form label{display:grid;gap:6px;font-weight:700;font-size:15px;color:var(--ink)}
+.form label .opt{font-weight:400;color:var(--muted);font-size:13px;margin-left:4px}
+.form input,.form select{font:inherit;min-height:52px;padding:0 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);width:100%}
+.done{display:grid;gap:10px;border-color:var(--green)}
+.done h3{font-size:20px}
+
+/* 怎麼運作 */
+.steps{display:grid;gap:16px;counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;min-width:0}
+.step .art{aspect-ratio:16/10;background:#E6F2FC;margin:0;overflow:hidden}
+.step .art img{width:100%;height:100%;object-fit:cover;transform:scale(1.2)}
+.step .body{padding:20px}
+.step .n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--num);font-weight:800;font-size:15px;margin-bottom:12px}
+.step p{color:var(--muted);margin-top:8px;font-size:15px}
+.dark .step{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)}
+.dark .step .n{background:var(--green)}
+.dark .step p{color:#B9C7DD}
+
+/* 價格 */
+.plans{display:grid;gap:16px}
+@media (min-width:900px){.plans{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;min-width:0}
+.plan.hl{border:2px solid var(--go);box-shadow:var(--shadow)}
+.plan .who{font-size:14px;color:var(--muted);font-weight:500}
+.plan h3{margin-top:4px}
+.plan .price{font-family:var(--num);font-size:34px;font-weight:800;color:var(--ink);margin:10px 0 2px;font-variant-numeric:tabular-nums}
+.plan .price small{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--muted)}
+.plan .price.text{font-family:var(--sans);font-size:24px;font-weight:900}
+.plan ul{margin:14px 0 0;padding-left:20px;display:grid;gap:6px;font-size:15px}
+.plan .no{font-size:13px;color:var(--muted);margin-top:auto;padding-top:16px}
+.tblwrap{overflow-x:auto;margin-top:24px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r)}
+.tiers{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.tiers th,.tiers td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tiers tr:last-child td{border-bottom:0}
+.tiers th{font-weight:500;color:var(--muted);font-size:13px}
+.tiers td.n{font-family:var(--num);font-weight:600}
+.tier-note{margin-top:12px}
+
+/* 倉庫和人 */
+.wh{display:grid;gap:24px}
+@media (min-width:900px){.wh{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}}
+.person{display:flex;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.avatar{position:relative;width:76px;height:76px;border-radius:50%;overflow:hidden;flex:none;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900;font-size:30px}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.person b{display:block;font-size:18px;color:var(--ink)}
+.person .role{font-size:14px;color:var(--muted)}
+.person p{font-size:15px;margin-top:6px}
+.where{display:grid;gap:10px;margin-top:20px;font-size:16px}
+.where .addr{font-weight:700;color:var(--ink);font-size:18px}
+.where a{font-weight:700}
+.facts{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+.facts li{display:flex;gap:10px;font-size:15px}
+.facts .ic{color:var(--green);margin-top:4px}
+.photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.photos:not(:has(figure)){display:none}
+.photos figure{margin:0;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--bg)}
+.photos img{width:100%;height:100%;object-fit:cover}
+
+/* 客戶 */
+.clients{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (min-width:900px){.clients{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.client{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+.client b{display:block;color:var(--ink);font-size:16px}
+.client span{display:block;font-size:14px;color:var(--muted);margin-top:4px}
+
+/* 常見問題 */
+.faq{max-width:820px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;padding:18px 0;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--muted);flex:none}
+.faq details[open] summary::after{content:"－"}
+.faq .a{padding:0 0 18px;color:var(--text);max-width:44em}
+
+/* 收尾和頁尾 */
+.final{text-align:left}
+.final .ctas{max-width:560px}
+footer{padding:32px 0 40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
+
+/* 手機底部固定按鈕 */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.97);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(14,36,87,.08);transform:translateY(110%);transition:transform .2s}
+.sticky.show{transform:none}
+.sticky .btn{min-height:48px;font-size:16px;padding:0 12px}
+@media (max-width:899px){body{padding-bottom:84px}}
+@media (min-width:900px){.sticky{display:none}}
+</style>
+<script src="config.js"></script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".14"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m7.5 12.2 3 3 6-6.4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="小倉・幫 MINIHUB 回到頁首"><b>小倉・幫</b><span>MINIHUB</span></a>
+    <a class="tel" href="tel:+886905432920"><svg class="ic"><use href="#i-phone"/></svg>打給馮先生</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">桃園平鎮 · 電商代出貨</div>
+      <h1>包貨交給我們，<br>你回去顧賣場。</h1>
+      <p class="lead"><strong>每單 30 元起</strong>，不含運費。月出 500 單以上，進倉、貼標、倉租、包材都算在一個月費裡。先試 100 單，不用簽約。</p>
+      <div class="ctas" id="hero-ctas">
+        <a class="btn btn-go" href="#calc">算算看，我每月能省多少</a>
+        <a class="btn btn-ghost" href="#trial">先試 100 單</a>
+      </div>
+      <ul class="proof">
+        <li><svg class="ic"><use href="#i-check"/></svg>桃園平鎮鋼構合法倉，不是鐵皮屋</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>每月實際出貨 3,000 到 9,000 單</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>蝦皮、momo、官網的訂單自動進倉</li>
+      </ul>
+    </div>
+    <figure class="hero-art"><img src="assets/hero.webp" width="1600" height="1200" alt="堆滿紙箱的包貨桌，換成整齊打包好、交給物流的箱子" fetchpriority="high" onerror="this.closest('figure').remove()"></figure>
+  </div>
+</div>
+
+<section id="calc" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">30 秒試算</div>
+      <h2>拉一下單量，馬上看到月費。</h2>
+      <p>用公開價格直接算，不用留資料，同時幫你算出自己做大概要花多少。</p>
+    </div>
+    <div class="calc">
+      <form class="panel" id="calc-form" aria-label="出貨費試算">
+        <div class="field">
+          <label for="orders">每月出貨 <output id="orders-out" class="num">500 單</output></label>
+          <input type="range" id="orders" name="orders" min="100" max="3000" step="50" value="500">
+          <div class="ticks"><span>100</span><span>1,500</span><span>3,000</span></div>
+        </div>
+        <div class="field">
+          <label for="items">平均每單幾件 <output id="items-out" class="num">1 件</output></label>
+          <input type="range" id="items" name="items" min="1" max="5" step="1" value="1">
+        </div>
+        <div class="field">
+          <span class="lab">賣什麼</span>
+          <div class="seg" role="radiogroup" aria-label="商品類型">
+            <label><input type="radio" name="cat" value="衣服配件" checked><span>衣服配件</span></label>
+            <label><input type="radio" name="cat" value="生活百貨"><span>生活百貨</span></label>
+            <label><input type="radio" name="cat" value="美妝保健"><span>美妝保健</span></label>
+            <label><input type="radio" name="cat" value="其他"><span>其他</span></label>
+          </div>
+          <p class="fine cat-note" id="cat-note" hidden>冷凍、單件超過 5 公斤、家具這類我們目前不做；其他常溫商品都可以，留電話時寫一下品項就好。</p>
+        </div>
+        <details class="assume" id="assume">
+          <summary id="assume-t">自己做的假設，可以改成你的數字</summary>
+          <div class="agrid">
+            <label>包貨的人數<input type="number" id="c-people" min="0" step="1" value="1" inputmode="numeric"></label>
+            <label>每人月薪<input type="number" id="c-wage" min="0" step="1000" value="32000" inputmode="numeric"></label>
+            <label>倉庫或店面月租<input type="number" id="c-rent" min="0" step="1000" value="15000" inputmode="numeric"></label>
+            <label>每單包材<input type="number" id="c-pack" min="0" step="1" value="5" inputmode="numeric"></label>
+            <label>倉庫系統月費<input type="number" id="c-sys" min="0" step="500" value="0" inputmode="numeric"></label>
+            <label>旺季加班、臨時工<input type="number" id="c-ot" min="0" step="1000" value="0" inputmode="numeric"></label>
+          </div>
+          <p class="fine" style="margin-top:10px">人數預設按每人每月包 700 單估。這只是估算，數字都可以改。</p>
+        </details>
+      </form>
+
+      <div class="result" aria-live="polite">
+        <div class="r-tag" id="r-tag">月方案 · 500 單階</div>
+        <div class="r-row"><span id="r-ours-l">交給小倉・幫</span><b id="r-ours">NT$17,500</b></div>
+        <div class="r-row self"><span id="r-self-l">自己做（照假設估算）</span><b id="r-self">NT$49,500</b></div>
+        <div class="r-save" id="r-save"><span class="lab" id="r-save-l">每月大約少花</span><b class="big" id="r-save-n">NT$32,000</b><p class="sub" id="r-save-s"></p></div>
+        <p class="r-note" id="r-note">含進倉、貼標、倉租、包材、倉庫系統。兩邊都不含運費。</p>
+        <ul class="r-lines" id="r-lines"></ul>
+        <div class="ctas">
+          <a class="btn btn-go" href="#trial">先試 100 單，不簽約</a>
+          <a class="btn btn-ghost" href="tel:+886905432920"><svg class="ic"><use href="#i-phone"/></svg>直接打給馮先生</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trial">
+  <div class="wrap offer">
+    <div>
+      <div class="eyebrow">先試 100 單</div>
+      <h2>不簽約，寄 20 箱過來就開始。</h2>
+      <p style="color:var(--muted);margin:12px 0 24px;font-size:17px">先拿一小部分訂單給我們出，看出得準不準、快不快，再決定要不要全部交過來。</p>
+      <ul class="checks">
+        <li><svg class="ic"><use href="#i-check"/></svg>試單期 100 單或 30 天，先到為準</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>每單 30 元，第二件起 2.5 元，不含運費</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>進倉費、倉租、首批 20 箱運費都不收</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>系統串接免費，資訊部同事協助</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>滿意再談月方案，不滿意庫存退回不收費</li>
+      </ul>
+      <div class="call">
+        <span class="fine">不想填表，直接打也可以，24 小時內回電</span>
+        <a href="tel:+886905432920"><svg class="ic"><use href="#i-phone"/></svg>0905-432-920</a>
+        <a href="tel:+88634607808" style="font-size:19px"><svg class="ic"><use href="#i-phone"/></svg>03-4607808</a>
+        <span class="fine">LINE 搜尋手機號碼就能加。</span>
+      </div>
+    </div>
+    <div>
+      <form class="panel form" id="lead">
+        <h3>留電話，馮先生打給你</h3>
+        <label>怎麼稱呼<input type="text" id="l-name" name="name" required autocomplete="name"></label>
+        <label>電話<input type="tel" id="l-phone" name="phone" required inputmode="tel" autocomplete="tel" placeholder="09xx-xxx-xxx"></label>
+        <label>賣場連結或品牌名<span class="opt">選填</span><input type="text" id="l-shop" name="shop" placeholder="蝦皮、momo、官網網址"></label>
+        <label>方便接電話的時段
+          <select id="l-slot" name="slot"><option>上午 9 到 12</option><option>下午 1 到 6</option><option>晚上 6 到 9</option></select>
+        </label>
+        <input type="hidden" id="l-orders" name="orders"><input type="hidden" id="l-items" name="items"><input type="hidden" id="l-cat" name="cat"><input type="hidden" id="l-quote" name="quote"><input type="hidden" id="l-seg" name="segment"><input type="hidden" id="l-self" name="selfcost">
+        <button class="btn btn-go" type="submit" id="l-submit">送出，等馮先生回電</button>
+        <p class="fine">只留電話和賣場，不收地址。試算的單量會一起帶過去，不用再講一次。</p>
+      </form>
+      <div class="panel done" id="done" hidden>
+        <h3>收到了。</h3>
+        <p>馮先生會在 24 小時內打給你。等不及的話直接打 <a class="num" href="tel:+886905432920">0905-432-920</a>。</p>
+      </div>
+      <div class="panel done" id="nohook" hidden>
+        <h3 id="nohook-h">線上表單還在接線。</h3>
+        <p>先直接打給馮先生，跟他說想試 100 單，他會跟你約時間：<a class="num" href="tel:+886905432920">0905-432-920</a>。LINE 搜尋這個號碼也能加。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">怎麼運作</div>
+      <h2>你照常接單，從倉庫到客人手上我們來。</h2>
+      <p>你不用進我們的後台。平台一有訂單，系統自動收到，我們揀貨、包裝、交給物流。</p>
+    </div>
+    <div class="steps">
+      <div class="step"><figure class="art"><img src="assets/step-1.webp" width="1200" height="900" alt="商品寄到倉庫，清點後上架" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure><div class="body"><span class="n">1</span><h3>商品寄到平鎮倉</h3><p>我們盤點、品檢、上架，進倉時貼好標籤。</p></div></div>
+      <div class="step"><figure class="art"><img src="assets/step-2.webp" width="1200" height="900" alt="賣場訂單自動進到倉庫系統" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure><div class="body"><span class="n">2</span><h3>串接你的賣場</h3><p>蝦皮、momo 和官網平台都能接，訂單自動進到我們的倉庫系統。資訊部同事全程協助設定。</p></div></div>
+      <div class="step"><figure class="art"><img src="assets/step-3.webp" width="1200" height="900" alt="包好的箱子交給物流車" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure><div class="body"><span class="n">3</span><h3>訂單自動出貨</h3><p>我們揀貨、包裝，交給新竹物流、黑貓或嘉里大榮，運費實報實銷。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">價格</div>
+      <h2>三種算法，按你的單量挑一種。</h2>
+      <p>價格直接寫在這裡，不用填表等報價。所有價格都不含運費，運費依你選的物流實報實銷，新竹物流 S60 約 75 元起。</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="who">月出 500 單以下</div>
+        <h3>單件計</h3>
+        <div class="price">NT$30 <small>/ 單起</small></div>
+        <ul><li>第二件起每件加 2.5 元，一單最多 80 元</li><li>45×52 破壞袋免費</li><li>倉庫系統免費</li></ul>
+        <div class="no">另計：進倉 5 元/件、倉租每箱每天 5 元（前三個月免）</div>
+      </div>
+      <div class="plan hl">
+        <div class="who">月出 500 到 2,000 單</div>
+        <h3>月方案</h3>
+        <div class="price">NT$17,500 <small>/ 月起</small></div>
+        <ul><li>一個價錢，含進倉、貼標、倉租、包材、系統</li><li>庫存可放到月單量的 8 倍</li><li>超過方案單量，每單 35 元</li></ul>
+        <div class="no">不含運費。階梯見下表。</div>
+      </div>
+      <div class="plan">
+        <div class="who">月出 2,000 單以上</div>
+        <h3>個別報價</h3>
+        <div class="price text">先算你現在的成本</div>
+        <ul><li>馮先生 24 小時內打給你</li><li>含人力、空間擴充的統包報價</li><li>可以約到倉庫談</li></ul>
+        <div class="no">留電話就好，不用填表。</div>
+      </div>
+    </div>
+    <div class="tblwrap">
+      <table class="tiers">
+        <thead><tr><th>月方案階梯</th><th>月費</th><th>換算每單</th><th>庫存上限</th></tr></thead>
+        <tbody>
+          <tr><td>500 單</td><td class="n">NT$17,500</td><td class="n">35.0</td><td class="n">4,000 件</td></tr>
+          <tr><td>800 單</td><td class="n">NT$26,400</td><td class="n">33.0</td><td class="n">6,400 件</td></tr>
+          <tr><td>1,200 單</td><td class="n">NT$37,200</td><td class="n">31.0</td><td class="n">9,600 件</td></tr>
+          <tr><td>2,000 單</td><td class="n">NT$58,000</td><td class="n">29.0</td><td class="n">16,000 件</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine tier-note">單量在兩階之間，我們比「小一階的月費加超出的每單 35 元」和「大一階的月費」，收便宜的那個。上面的試算器已經幫你比好了。</p>
+  </div>
+</section>
+
+<section id="warehouse">
+  <div class="wrap wh">
+    <div>
+      <div class="eyebrow">倉庫和人</div>
+      <h2>桃園平鎮，歡迎來看倉庫。</h2>
+      <div class="person" style="margin-top:24px">
+        <div class="avatar"><span aria-hidden="true">馮</span><img src="assets/bobby.jpg" alt="小倉・幫負責人馮先生" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div><b>馮先生（Bobby）</b><span class="role">小倉・幫負責人</span><p>大小客戶都是他親自接。要來看倉庫、要談價格，直接找他。</p></div>
+      </div>
+      <div class="where">
+        <div class="addr">桃園市平鎮區太平東路 1 之 20 號</div>
+        <div>平鎮，近大溪交流道。來之前先打個電話約時間。</div>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%83%E5%9C%92%E5%B8%82%E5%B9%B3%E9%8E%AE%E5%8D%80%E5%A4%AA%E5%B9%B3%E6%9D%B1%E8%B7%AF1%E4%B9%8B20%E8%99%9F" target="_blank" rel="noopener">在 Google 地圖打開</a>
+      </div>
+      <ul class="facts">
+        <li><svg class="ic"><use href="#i-check"/></svg>鋼構合法倉庫，24 小時監控、出入管制</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>兩個出貨台、三位同事，每天最多 700 單</li>
+      </ul>
+    </div>
+    <div class="photos" id="photos">
+      <figure><img src="assets/wh-1.jpg" width="1200" height="900" alt="平鎮倉外觀" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="assets/wh-2.jpg" width="1200" height="900" alt="貨架走道" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="assets/wh-3.jpg" width="1200" height="900" alt="出貨台" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="assets/wh-4.jpg" width="1200" height="900" alt="物流來收貨" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="clients" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">現在幫誰出貨</div>
+      <h2>五個客戶，每月合計 3,000 到 9,000 單。</h2>
+      <p>名字等客戶同意再放。</p>
+    </div>
+    <div class="clients">
+      <div class="client"><b>寢具、床包</b><span>momo 賣家 · 新竹物流</span></div>
+      <div class="client"><b>服飾</b><span>電商代出貨</span></div>
+      <div class="client"><b>保養品</b><span>精華液</span></div>
+      <div class="client"><b>烘焙店包材</b><span>五家門店補貨</span></div>
+      <div class="client"><b>教材快閃</b><span>一萬五千多本分裝，送到 42 個班</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="move">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">換過來會不會很麻煩</div>
+      <h2>三步，不斷貨。</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="body"><span class="n">1</span><h3>第一週：寄 20 箱過來試</h3><p>其他庫存先留在你那邊照常出。我們上架、串系統，先接一部分訂單。</p></div></div>
+      <div class="step"><div class="body"><span class="n">2</span><h3>第二週：你看出貨紀錄</h3><p>每天出了幾單、幾點交物流、有沒有錯，一張表給你。</p></div></div>
+      <div class="step"><div class="body"><span class="n">3</span><h3>滿 100 單或 30 天：你決定</h3><p>要的話，剩下的庫存我們免費協助移倉。不要的話，剩的貨退回給你，進倉費、倉租都不收。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">常被問的</div>
+      <h2>私訊裡最常出現的問題，一次答完。</h2>
+    </div>
+    <div class="faq">
+      <details><summary>30 元含運費嗎？</summary><div class="a">不含。30 元是揀貨加包裝。運費依你選的物流實報實銷，新竹物流 S60 約 75 元、S90 約 80 元。</div></details>
+      <details><summary>「箱」是什麼意思？倉租怎麼算？</summary><div class="a">箱是指三邊加起來 90 公分以內的紙箱。倉租每箱每天 5 元，前三個月免。月方案不另算倉租，庫存放到方案單量的 8 倍以內都包。</div></details>
+      <details><summary>月方案有沒有其他費用？</summary><div class="a">運費以外沒有。進倉、貼標、倉租、包材、系統都在月費裡。超過方案單量的部分每單 35 元。</div></details>
+      <details><summary>一單很多件怎麼算？</summary><div class="a">單件計：首件 30 元，第二件起每件 2.5 元，三件就是 35 元，一單最多收 80 元。月方案只算單數不算件數。</div></details>
+      <details><summary>系統怎麼串？我要每天傳訂單給你們嗎？</summary><div class="a">不用。我們的倉庫系統直接串接蝦皮、momo 和官網平台，訂單自動進來，資訊部同事會協助設定。</div></details>
+      <details><summary>你們能處理多少單？旺季接得住嗎？</summary><div class="a">現在每月 3,000 到 9,000 單，兩個出貨台一天最多 700 單。超過這個量我們會先跟你說，不會接了出不來。</div></details>
+      <details><summary>重的東西、冷凍、家具收嗎？</summary><div class="a">冷凍、冷藏、家具和單件超過 5 公斤的商品目前不做。比較重的常溫商品，先告訴我們品項和重量，我們看過再報價。</div></details>
+      <details><summary>發票怎麼處理？</summary><div class="a">兩種：你用電子發票直接寄給客人，或把發票上傳到我們系統，出貨時我們放進包裹。</div></details>
+      <details><summary>可以換包裝、加卡片、加 DM 嗎？</summary><div class="a">可以。換包裝每件 3 元、加傳單每件 1 元、貼標每件 2 元。月方案已含貼標。</div></details>
+      <details><summary>退貨怎麼辦？</summary><div class="a">退貨進倉每件 5 元，需要整理的每件再加 5 元。</div></details>
+      <details><summary>月方案的庫存可以放多少？</summary><div class="a">可以放到方案單量的 8 倍，這個範圍內不另收倉租。超出的部分另計，我們會先跟你講好怎麼算。</div></details>
+      <details><summary>有合約嗎？要綁多久？</summary><div class="a">試單不簽約。試單滿意後月方案按月計，一年約首半年九折，送季度盤點。</div></details>
+      <details><summary>可以先來看倉庫嗎？</summary><div class="a">可以，先打電話約時間。地址在上面。</div></details>
+      <details><summary>我一個月才幾十單，可以嗎？</summary><div class="a">可以用單件計，但加上倉租可能比自己出貴。建議月出 300 單以上再考慮外包。</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="dark final">
+  <div class="wrap">
+    <h2>還在想？直接打給馮先生聊聊。</h2>
+    <p style="color:#B9C7DD;margin-top:12px;font-size:17px;max-width:34em">要看倉庫、要算你的單量、要問特殊商品，打一通電話最快。</p>
+    <div class="ctas">
+      <a class="btn btn-go" href="tel:+886905432920"><svg class="ic"><use href="#i-phone"/></svg>0905-432-920 馮先生</a>
+      <a class="btn btn-ghost" href="#trial">留電話，先試 100 單</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>小倉・幫 MINIHUB · 成星資訊有限公司</span>
+    <span>桃園市平鎮區太平東路 1 之 20 號</span>
+    <span>所有價格都不含運費</span>
+  </div>
+</footer>
+
+<nav class="sticky" id="sticky" aria-label="快速聯絡">
+  <a class="btn btn-ghost" href="tel:+886905432920"><svg class="ic"><use href="#i-phone"/></svg>打電話</a>
+  <a class="btn btn-go" href="#trial">先試 100 單</a>
+</nav>
+
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const fmt=n=>'NT$'+Math.round(n).toLocaleString('en-US');
+  const TIERS=[[500,17500],[800,26400],[1200,37200],[2000,58000]],OVER=35;
+  // 表單和試算記錄送到 Make webhook，網址放在 config.js；沒設定時表單改成請客人直接打電話
+  const HOOK=((window.MINIHUB_CONFIG||{}).webhookUrl)||'';
+  let logTimer=null,touched=false,SRC='';
+  const orders=$('orders'),items=$('items');
+
+  function cat(){const c=document.querySelector('input[name=cat]:checked');return c?c.value:'其他';}
+  function quote(){
+    const o=+orders.value,i=+items.value;
+    if(o>2000) return {mode:'big',o,i};
+    if(o<300){
+      const per=Math.min(30+2.5*(i-1),80);
+      const ship=per*o, inbound=5*o*i;
+      const boxes=Math.ceil(o*i*3/30); // 約三個月庫存，每箱 30 件
+      const rent=boxes*5*30;
+      return {mode:'unit',o,i,per,ship,inbound,rent,boxes,total:ship+inbound+rent};
+    }
+    // 兩階之間：小一階月費加超量每單 35 元，或直接用大一階，取便宜的
+    let best=null;
+    TIERS.forEach(([n,f])=>{const over=Math.max(0,o-n),fee=f+over*OVER;if(!best||fee<best.fee)best={tier:n,base:f,over,fee};});
+    return Object.assign({mode:'plan',o,i,per:best.fee/o},best);
+  }
+  function selfCost(o){
+    const people=+$('c-people').value,wage=+$('c-wage').value,rent=+$('c-rent').value,pack=+$('c-pack').value,sys=+$('c-sys').value,ot=+$('c-ot').value;
+    const hours=Math.round(o*3/60);
+    const labor=people*wage,packing=pack*o;
+    const total=labor+rent+packing+sys+ot;
+    return {total,hours,labor,rent,packing,sys,ot,per:o?total/o:0,people,wage};
+  }
+  function segment(o){return o>2000?'big':(o<300?'small':'mid');}
+  function setText(id,t){$(id).textContent=t;}
+
+  function render(){
+    const q=quote(),s=selfCost(q.o),seg=segment(q.o);
+    setText('orders-out',q.o.toLocaleString('en-US')+' 單');
+    setText('items-out',q.i+' 件');
+    $('cat-note').hidden=cat()!=='其他';
+    const lines=$('r-lines');lines.innerHTML='';
+    const add=(a,b)=>{const li=document.createElement('li');li.innerHTML='<span></span><span></span>';li.children[0].textContent=a;li.children[1].textContent=b;lines.appendChild(li);};
+    const save=$('r-save');
+    let quoteText='';
+    if(q.mode==='big'){
+      setText('r-tag','2,000 單以上 · 個別報價');
+      setText('r-ours-l','交給小倉・幫');setText('r-ours','統包報價');
+      setText('r-self-l','你現在每月大約');setText('r-self',fmt(s.total));
+      save.classList.add('neutral');
+      setText('r-save-l','你現在每單大約');setText('r-save-n',fmt(s.per));
+      setText('r-save-s','這個量我們不套公式，報價以低於你現在的成本為目標，含人力、空間擴充和系統。');
+      setText('r-note','你的成本填準一點，馮先生打給你時就直接談。兩邊都不含運費。');
+      add('人力 '+s.people+' 人',fmt(s.labor));add('倉庫租金',fmt(s.rent));add('包材',fmt(s.packing));add('系統',fmt(s.sys));add('旺季加班、臨時工',fmt(s.ot));
+      setText('assume-t','你現在每月花多少？改成你的數字');
+      $('assume').open=true;
+      quoteText='個別報價，自建約 '+fmt(s.total)+'/月';
+    }else{
+      const ours=q.mode==='plan'?q.fee:q.total;
+      setText('r-ours-l','交給小倉・幫');setText('r-ours',(q.mode==='unit'?'約 ':'')+fmt(ours));
+      setText('r-self-l','自己做（照假設估算）');setText('r-self',fmt(s.total));
+      setText('assume-t','自己做的假設，可以改成你的數字');
+      const d=s.total-ours;
+      save.classList.toggle('neutral',d<0);
+      setText('r-save-l',d>=0?'每月大約少花':'每月大約多花');
+      setText('r-save-n',fmt(Math.abs(d)));
+      setText('r-save-s',d>=0?'另外省下約 '+s.hours+' 小時包貨時間。':'但省下約 '+s.hours+' 小時包貨時間。單量還不多的話，可以先不急著外包。');
+      if(q.mode==='plan'){
+        setText('r-tag','月方案 · '+q.tier.toLocaleString('en-US')+' 單階');
+        setText('r-note','含進倉、貼標、倉租、包材、倉庫系統。兩邊都不含運費。');
+        if(q.over){add(q.tier.toLocaleString('en-US')+' 單月費',fmt(q.base));add('超出 '+q.over+' 單 × '+OVER+' 元',fmt(q.over*OVER));}
+        add('換算每單',q.per.toFixed(1)+' 元');add('庫存上限',(q.tier*8).toLocaleString('en-US')+' 件');
+        quoteText='月方案 '+q.tier+' 單階'+(q.over?'＋超量 '+q.over+' 單':'')+' '+fmt(q.fee);
+      }else{
+        setText('r-tag','單件計');
+        setText('r-note','前三個月免倉租，這裡的倉租是第四個月起的估算。兩邊都不含運費。');
+        add('出貨 '+q.o+' 單 × '+q.per+' 元',fmt(q.ship));add('進倉 '+(q.o*q.i)+' 件 × 5 元',fmt(q.inbound));add('倉租約 '+q.boxes+' 箱 × 5 元 × 30 天',fmt(q.rent));
+        quoteText='單件計約 '+fmt(q.total);
+      }
+    }
+    $('l-orders').value=q.o;$('l-items').value=q.i;$('l-cat').value=cat();$('l-quote').value=quoteText;$('l-seg').value=seg;
+    $('l-self').value=JSON.stringify({people:s.people,wage:s.wage,rent:s.rent,sys:s.sys,ot:s.ot,packPerOrder:+$('c-pack').value,total:s.total,perOrder:Math.round(s.per)});
+    setText('l-submit',seg==='big'?'送出，馮先生 24 小時內打來談統包':'送出，等馮先生回電');
+    // 只記客人動過的試算，頁面載入時的預設值不算
+    if(touched){clearTimeout(logTimer);logTimer=setTimeout(()=>log('calc',{orders:q.o,items:q.i,cat:cat(),quote:quoteText,segment:seg}),1500);}
+  }
+
+  function send(type,data){
+    const body=new URLSearchParams();
+    Object.entries(Object.assign({type,at:new Date().toISOString(),src:SRC},data)).forEach(([k,v])=>body.append(k,v!==null&&typeof v==='object'?JSON.stringify(v):String(v??'')));
+    // no-cors：Make 收得到，但瀏覽器讀不到回應，只能用「有沒有送出去」判斷
+    return fetch(HOOK,{method:'POST',mode:'no-cors',body});
+  }
+  function log(type,data){ if(HOOK) send(type,data).catch(()=>{}); }
+
+  // 人數要在重算之前更新，自己做的成本才不會慢一步
+  orders.addEventListener('input',()=>{const p=Math.max(1,Math.ceil(+orders.value/700));if(!$('c-people').dataset.touched)$('c-people').value=p;});
+  $('c-people').addEventListener('input',e=>{e.target.dataset.touched='1';});
+  ['orders','items','c-people','c-wage','c-rent','c-pack','c-sys','c-ot'].forEach(id=>$(id).addEventListener('input',()=>{touched=true;render();}));
+  document.querySelectorAll('input[name=cat]').forEach(r=>r.addEventListener('change',()=>{touched=true;render();}));
+  $('calc-form').addEventListener('submit',e=>e.preventDefault());
+
+  // Messenger 兩題的答案帶進網址：#mid 或 #mid&cat=daily；廣告來源用 utm_* 或 &src=
+  const CATS={clothes:'衣服配件',daily:'生活百貨',beauty:'美妝保健',other:'其他'};
+  try{
+    const hp=new URLSearchParams((location.hash||'').replace(/^#/,'').replace(/^(small|mid|big)(?=&|$)/,'seg=$1'));
+    const qp=new URLSearchParams(location.search);
+    const preset={small:150,mid:800,big:2500}[hp.get('seg')];
+    if(preset){orders.value=preset;$('c-people').value=Math.max(1,Math.ceil(preset/700));}
+    const c=CATS[hp.get('cat')];if(c){const r=document.querySelector('input[name=cat][value="'+c+'"]');if(r)r.checked=true;}
+    SRC=[hp.get('seg'),hp.get('src')||qp.get('utm_content'),qp.get('utm_source'),qp.get('utm_campaign')].filter(Boolean).join('|');
+    // 從 Messenger 帶答案進來的人，直接捲到試算結果
+    if(preset) requestAnimationFrame(()=>$('calc').scrollIntoView());
+  }catch(e){}
+
+  $('lead').addEventListener('submit',e=>{
+    e.preventDefault();
+    let selfcost=null;try{selfcost=JSON.parse($('l-self').value||'null');}catch(err){}
+    const data={name:$('l-name').value.trim(),phone:$('l-phone').value.trim(),shop:$('l-shop').value.trim(),slot:$('l-slot').value,orders:$('l-orders').value,items:$('l-items').value,cat:$('l-cat').value,quote:$('l-quote').value,segment:$('l-seg').value,selfcost};
+    if(!data.name||!data.phone) return;
+    $('l-submit').disabled=true;
+    const show=ok=>{$('lead').hidden=true;if(ok){$('done').hidden=false;}else{setText('nohook-h','沒有送出去，不好意思。');$('nohook').hidden=false;}};
+    if(!HOOK){show(false);return;}
+    send('lead',data).then(()=>show(true)).catch(()=>show(false));
+  });
+
+  // 手機底部按鈕：第一屏的按鈕看不到、也還沒捲到試單區時才出現
+  const sticky=$('sticky');
+  if('IntersectionObserver' in window){
+    let heroIn=true,trialIn=false;
+    const upd=()=>sticky.classList.toggle('show',!heroIn&&!trialIn);
+    new IntersectionObserver(es=>{heroIn=es[0].isIntersecting;upd();}).observe($('hero-ctas'));
+    new IntersectionObserver(es=>{trialIn=es[0].isIntersecting;upd();},{threshold:.1}).observe($('trial'));
+  }
+
+  if(!HOOK){$('lead').hidden=true;$('nohook').hidden=false;}
+  render();
+})();
+</script>
+</body>
+</html>

@@ -23,6 +23,10 @@ GitHub Pages serves the static files in `docs/` from the `main` branch. Renderin
 
 All required Three.js modules are included locally. No external CDN, analytics or login is required. A WebGL-capable browser is needed. Third-party Three.js code retains its MIT license at `docs/vendor/three/LICENSE`. Original model and drawing assets are supplied for this project; no additional reuse license is granted here.
 
+## Other page in this repository
+
+`docs/minihub/` is a temporary public preview of the MINIHUB (小倉・幫) landing page, published at https://eaglish-fam.github.io/residence-3d-viewer/minihub/ . It is unrelated to the residence viewer. Its source is maintained in a separate private repository and copied here; do not edit it here. It loads Google Fonts and is marked `noindex`. It will be removed once the page moves to its own domain.
+
 ## Files
 
 - `docs/index.html`, `style.css`: responsive interface
