@@ -357,6 +357,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
         <label>方便接電話的時段
           <select id="l-slot" name="slot"><option>上午 9 到 12</option><option>下午 1 到 6</option><option>晚上 6 到 9</option></select>
         </label>
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>網站<input type="text" id="l-hp" name="website" tabindex="-1" autocomplete="off"></label></div>
         <input type="hidden" id="l-orders" name="orders"><input type="hidden" id="l-items" name="items"><input type="hidden" id="l-cat" name="cat"><input type="hidden" id="l-quote" name="quote"><input type="hidden" id="l-seg" name="segment"><input type="hidden" id="l-self" name="selfcost">
         <button class="btn btn-go" type="submit" id="l-submit">送出，等馮先生回電</button>
         <p class="fine">只留電話和賣場，不收地址。試算的單量會一起帶過去，不用再講一次。</p>
@@ -548,7 +549,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
   const fmt=n=>'NT$'+Math.round(n).toLocaleString('en-US');
   const TIERS=[[500,17500],[800,26400],[1200,37200],[2000,58000]],OVER=35;
   // 表單和試算記錄送到 Make webhook，網址放在 config.js；沒設定時表單改成請客人直接打電話
-  const HOOK=((window.MINIHUB_CONFIG||{}).webhookUrl)||'';
+  const CFG=window.MINIHUB_CONFIG||{},HOOK=CFG.webhookUrl||'';
   let logTimer=null,touched=false,SRC='';
   const orders=$('orders'),items=$('items');
 
@@ -635,7 +636,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
     // no-cors：Make 收得到，但瀏覽器讀不到回應，只能用「有沒有送出去」判斷
     return fetch(HOOK,{method:'POST',mode:'no-cors',body});
   }
-  function log(type,data){ if(HOOK) send(type,data).catch(()=>{}); }
+  // 試算記錄量大，Make 免費額度不夠，config.js 開了 sendCalc 才送
+  function log(type,data){ if(HOOK&&CFG.sendCalc) send(type,data).catch(()=>{}); }
 
   // 人數要在重算之前更新，自己做的成本才不會慢一步
   orders.addEventListener('input',()=>{const p=Math.max(1,Math.ceil(+orders.value/700));if(!$('c-people').dataset.touched)$('c-people').value=p;});
@@ -663,6 +665,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
     const data={name:$('l-name').value.trim(),phone:$('l-phone').value.trim(),shop:$('l-shop').value.trim(),slot:$('l-slot').value,orders:$('l-orders').value,items:$('l-items').value,cat:$('l-cat').value,quote:$('l-quote').value,segment:$('l-seg').value,selfcost};
     if(!data.name||!data.phone) return;
     $('l-submit').disabled=true;
+    // 隱藏欄位有填的是機器人：畫面照常顯示收到，資料不送
+    if($('l-hp').value){$('lead').hidden=true;$('done').hidden=false;return;}
     const show=ok=>{$('lead').hidden=true;if(ok){$('done').hidden=false;}else{setText('nohook-h','沒有送出去，不好意思。');$('nohook').hidden=false;}};
     if(!HOOK){show(false);return;}
     send('lead',data).then(()=>show(true)).catch(()=>show(false));
