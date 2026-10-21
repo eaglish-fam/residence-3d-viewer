@@ -231,6 +231,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
 .sticky .btn{min-height:48px;font-size:16px;padding:0 12px}
 @media (max-width:899px){body{padding-bottom:84px}}
 @media (min-width:900px){.sticky{display:none}}
+
+/* 懸浮「常見問題」按鈕 */
+.faq-fab{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:25;display:inline-flex;align-items:center;gap:6px;min-height:48px;padding:0 16px;border-radius:999px;background:var(--navy);color:#fff;border:2px solid #fff;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 6px 18px rgba(14,36,87,.35);transition:opacity .2s,transform .2s,bottom .2s}
+.faq-fab.hide{opacity:0;pointer-events:none;transform:translateY(8px)}
+.faq-fab:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@media (max-width:899px){body.has-sticky .faq-fab{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 </style>
 <script src="config.js"></script>
 </head>
@@ -296,7 +302,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
             <label><input type="radio" name="cat" value="美妝保健"><span>美妝保健</span></label>
             <label><input type="radio" name="cat" value="其他"><span>其他</span></label>
           </div>
-          <p class="fine cat-note" id="cat-note" hidden>冷凍、單件超過 5 公斤、家具這類我們目前不做；其他常溫商品都可以，留電話時寫一下品項就好。</p>
+          <p class="fine cat-note" id="cat-note" hidden>冷凍、冷藏不做。大件、重的商品（三邊加起來超過 90 公分，或單件超過 5 公斤）要另外報價，留電話時寫一下品項和尺寸重量就好。</p>
         </div>
         <details class="assume" id="assume">
           <summary id="assume-t">自己做的假設，可以改成你的數字</summary>
@@ -454,10 +460,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
       </ul>
     </div>
     <div class="photos" id="photos">
-      <figure><img src="assets/wh-1.jpg" width="1200" height="900" alt="平鎮倉外觀" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure>
-      <figure><img src="assets/wh-2.jpg" width="1200" height="900" alt="貨架走道" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure>
-      <figure><img src="assets/wh-3.jpg" width="1200" height="900" alt="出貨台" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure>
-      <figure><img src="assets/wh-4.jpg" width="1200" height="900" alt="物流來收貨" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="assets/wh-1.jpg" width="1200" height="900" alt="平鎮倉外觀" decoding="async" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="assets/wh-2.jpg" width="1200" height="900" alt="貨架走道" decoding="async" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="assets/wh-3.jpg" width="1200" height="900" alt="出貨台" decoding="async" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="assets/wh-4.jpg" width="1200" height="900" alt="物流來收貨" decoding="async" onerror="this.closest('figure').remove()"></figure>
     </div>
   </div>
 </section>
@@ -506,7 +512,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
       <details><summary>一單很多件怎麼算？</summary><div class="a">單件計：首件 30 元，第二件起每件 2.5 元，三件就是 35 元，一單最多收 80 元。月方案只算單數不算件數。</div></details>
       <details><summary>系統怎麼串？我要每天傳訂單給你們嗎？</summary><div class="a">不用。我們的倉庫系統直接串接蝦皮、momo 和官網平台，訂單自動進來，資訊部同事會協助設定。</div></details>
       <details><summary>你們能處理多少單？旺季接得住嗎？</summary><div class="a">現在每月 3,000 到 9,000 單，兩個出貨台一天最多 700 單。超過這個量我們會先跟你說，不會接了出不來。</div></details>
-      <details><summary>重的東西、冷凍、家具收嗎？</summary><div class="a">冷凍、冷藏、家具和單件超過 5 公斤的商品目前不做。比較重的常溫商品，先告訴我們品項和重量，我們看過再報價。</div></details>
+      <details><summary>東西比較大或比較重，怎麼算？</summary><div class="a">運費看包裝好之後「三邊加起來」幾公分，新竹物流常溫約：60 以內 75 元、90 以內 80 元、120 以內 105 元、150 以內 135 元、180 以內 165 元，實報實銷，以當期報價為準。有的物流用「才」計，一才是 30×30×30 公分，長乘寬乘高再除以 27,000。揀貨包裝這邊，三邊加起來超過 90 公分，或單件超過 5 公斤的，30 元不夠，我們看過尺寸和重量再一次報清楚。</div></details>
+      <details><summary>冷凍、家具、貓砂這類能收嗎？</summary><div class="a">冷凍、冷藏不做。家具、貓砂這類大件或重的常溫商品可以談，但不是 30 元，也不一定收得下。先告訴我們品項、單件尺寸和重量，馮先生看過再說能不能收、怎麼收。</div></details>
       <details><summary>發票怎麼處理？</summary><div class="a">兩種：你用電子發票直接寄給客人，或把發票上傳到我們系統，出貨時我們放進包裹。</div></details>
       <details><summary>可以換包裝、加卡片、加 DM 嗎？</summary><div class="a">可以。換包裝每件 3 元、加傳單每件 1 元、貼標每件 2 元。月方案已含貼標。</div></details>
       <details><summary>退貨怎麼辦？</summary><div class="a">退貨進倉每件 5 元，需要整理的每件再加 5 元。</div></details>
@@ -537,6 +544,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
     <span>所有價格都不含運費</span>
   </div>
 </footer>
+
+<a class="faq-fab hide" id="faq-fab" href="#faq" aria-label="跳到常見問題">常見問題 <span aria-hidden="true">↓</span></a>
 
 <nav class="sticky" id="sticky" aria-label="快速聯絡">
   <a class="btn btn-ghost" href="tel:+886905432920"><svg class="ic"><use href="#i-phone"/></svg>打電話</a>
@@ -676,10 +685,21 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 24px}
   const sticky=$('sticky');
   if('IntersectionObserver' in window){
     let heroIn=true,trialIn=false;
-    const upd=()=>sticky.classList.toggle('show',!heroIn&&!trialIn);
+    const upd=()=>{const on=!heroIn&&!trialIn;sticky.classList.toggle('show',on);document.body.classList.toggle('has-sticky',on);};
     new IntersectionObserver(es=>{heroIn=es[0].isIntersecting;upd();}).observe($('hero-ctas'));
     new IntersectionObserver(es=>{trialIn=es[0].isIntersecting;upd();},{threshold:.1}).observe($('trial'));
   }
+
+  // 懸浮「常見問題」：第一屏之後出現，捲到常見問題區就收起來
+  const fab=$('faq-fab');
+  // 照片還沒補齊時圖片會收掉，版面高度會變；跳過去之後再對一次位置
+  fab.addEventListener('click',()=>{[500,1100].forEach(t=>setTimeout(()=>{const y=$('faq').getBoundingClientRect().top;if(Math.abs(y-72)>6)window.scrollBy({top:y-72,behavior:'auto'});},t));});
+  if('IntersectionObserver' in window){
+    let heroSeen=true,faqIn=false;
+    const updF=()=>fab.classList.toggle('hide',heroSeen||faqIn);
+    new IntersectionObserver(es=>{heroSeen=es[0].isIntersecting;updF();}).observe($('hero-ctas'));
+    new IntersectionObserver(es=>{faqIn=es[0].isIntersecting;updF();},{threshold:.05}).observe($('faq'));
+  }else{fab.classList.remove('hide');}
 
   if(!HOOK){$('lead').hidden=true;$('nohook').hidden=false;}
   render();
